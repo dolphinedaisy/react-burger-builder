@@ -4,17 +4,12 @@ import Burger from "../../Components/Burger/Burger";
 
 class BurgerBuilder extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = { }
-    // }
-
     state = {
         ingredients: {
-            cheese: 1,
-            salad: 1,
-            bacon: 1,
-            meat: 1
+            cheese: 0,
+            salad: 0,
+            bacon: 0,
+            meat: 0
         }
     }
 
