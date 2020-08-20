@@ -21,9 +21,9 @@ const burger = (props) => {
 
     return (
         <div className={classes.Burger}>
-            <BurgerIngredient type={BurgerIngredients.breadTop} />
+            <BurgerIngredient type={BurgerIngredients.breadTop.type} />
             {transformedIngredient}
-            <BurgerIngredient type={BurgerIngredients.breadBottom} />
+            <BurgerIngredient type={BurgerIngredients.breadBottom.type} />
         </div>
     );
 };
