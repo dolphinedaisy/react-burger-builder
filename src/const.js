@@ -1,26 +1,32 @@
 export const BurgerIngredients = {
     cheese: {
         label: 'Cheese',
-        type: 'cheese'
+        type: 'cheese',
+        price: 2
     },
     salad: {
         label: 'Salad',
-        type: 'salad'
+        type: 'salad',
+        price: 1
     },
     bacon: {
         label: 'Bacon',
-        type: 'bacon'
+        type: 'bacon',
+        price: 4
     },
     meat: {
         label: 'Meat',
-        type: 'meat'
+        type: 'meat',
+        price: 5
     },
     breadTop: {
         label: 'Bread Top',
-        type: 'breadTop'
+        type: 'breadTop',
+        price: 3
     },
     breadBottom: {
         label: 'Bread Bottom',
-        type: 'breadBottom'
+        type: 'breadBottom',
+        price: 3
     }
 }

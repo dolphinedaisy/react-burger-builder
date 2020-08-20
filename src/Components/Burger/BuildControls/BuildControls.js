@@ -9,7 +9,7 @@ const buildControls = (props) => {
             {
                 Object.entries(BurgerIngredients)
                     .map((ing) => {
-                       return <BuildControl key={ing[1].type} label={ing[1].label}/>
+                       return <BuildControl ingredientAdded={() => props.ingredientAdded(ing[1].type)} key={ing[1].type} label={ing[1].label}/>
                     })
             }
         </div>
