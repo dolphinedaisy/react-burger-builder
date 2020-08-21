@@ -21,7 +21,8 @@ const orderSummary = (props) => {
             <ul className="list-group">
                 {ingredients}
             </ul>
-            <p className='mt-2 font-weight-bold'>Continue to checkout</p>
+            <p className='mt-2 font-weight-bold'>Continue to checkout?</p>
+
         </ReactAux>
     );
 };
