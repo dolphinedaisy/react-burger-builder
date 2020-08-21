@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import ReactAux from "../../hoc/ReactAux";
+import ReactAux from "../../hoc/ReactAux/ReactAux";
 import Burger from "../../Components/Burger/Burger";
 import BuildControls from "../../Components/Burger/BuildControls/BuildControls";
 import { BurgerIngredients } from "../../const";
-import Modal from "../../Components/Layout/UI/Backdrop/Modal/Modal";
 import OrderSummary from "../../Components/Burger/OrderSummary/OrderSummary";
+import Modal from "../../Components/UI-Components/Backdrop/Modal/Modal";
 
 class BurgerBuilder extends Component {
 
