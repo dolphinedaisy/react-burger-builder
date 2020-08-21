@@ -2,11 +2,13 @@ import React from "react";
 import ReactAux from "../../hoc/ReactAux";
 import classes from "./Layout.module.css";
 import Toolbar from "../../Components/Navigation/Toolbar/Toolbar";
+import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 
 const layout = (props) => (
     <ReactAux>
         <Toolbar />
-        <main attr='heelo' className={classes.Content}>
+        <SideDrawer />
+        <main className={classes.Content}>
             {props.children}
         </main>
     </ReactAux>
