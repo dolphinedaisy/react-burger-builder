@@ -14,7 +14,20 @@ class BurgerBuilder extends Component {
             salad: 0
 
         },
+        purchasable: false,
         totalPrice: 5
+    }
+
+    updatePurchaseState(ingredients) {
+        const sum = Object.keys(ingredients)
+            .map((ing) => {
+                return ingredients[ing]
+            })
+            .reduce((sum, ele) => {
+                return sum + ele;
+            }, 0);
+
+        this.setState({purchasable: sum > 0});
     }
 
     addIngredient = (type) => {
@@ -27,7 +40,8 @@ class BurgerBuilder extends Component {
         this.setState({
             totalPrice: newPrice,
             ingredients: updatedIngredients
-        })
+        });
+        this.updatePurchaseState(updatedIngredients);
 
     }
 
@@ -44,7 +58,8 @@ class BurgerBuilder extends Component {
         this.setState({
             totalPrice: newPrice,
             ingredients: updatedIngredients
-        })
+        });
+        this.updatePurchaseState(updatedIngredients);
     }
 
     render() {
@@ -62,6 +77,7 @@ class BurgerBuilder extends Component {
                         <div className="my-3 mx-auto col-lg-6">
                             <BuildControls disabled={disabledInfo}
                                            price={this.state.totalPrice}
+                                           purchasable={this.state.purchasable}
                                            ingredientRemoved={this.removeIngredient}
                                            ingredientAdded={this.addIngredient} />
                         </div>
