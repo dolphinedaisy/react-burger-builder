@@ -9,7 +9,9 @@ const buildControls = (props) => {
             <div className={'d-flex justify-content-center'}>
                 <p className="p-3 mb-0 mr-2 h3 text-dark font-weight-bold text-center">Price is - {props.price}$</p>
                 {/*<button className={'btn btn-secondary border-secondary rounded-circle p-2'}>Checkout</button>*/}
-                <button disabled={!props.purchasable} className={classes.OrderButton}>Checkout</button>
+                <button disabled={!props.purchasable}
+                        onClick={props.ordered}
+                        className={classes.OrderButton}>Checkout</button>
             </div>
             {
                 Object.entries(BurgerIngredients)
