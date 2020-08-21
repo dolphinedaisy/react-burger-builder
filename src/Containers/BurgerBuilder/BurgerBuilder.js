@@ -89,7 +89,8 @@ class BurgerBuilder extends Component {
                 {/*if user is purchasing, click on checkout button then only show modal*/}
                 <Modal modalClosed={this.purchaseCancelHandler}
                        show={this.state.purchasing}>
-                    <OrderSummary purchaseContinue={this.purchaseContinueHandler}
+                    <OrderSummary price={this.state.totalPrice}
+                                  purchaseContinue={this.purchaseContinueHandler}
                                   purchaseCancel={this.purchaseCancelHandler}
                                   ingredients={this.state.ingredients} />
                 </Modal>

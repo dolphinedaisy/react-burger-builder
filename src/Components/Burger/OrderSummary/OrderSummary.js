@@ -22,7 +22,7 @@ const orderSummary = (props) => {
             <ul className="list-group">
                 {ingredients}
             </ul>
-            <p className='mt-2 font-weight-bold'>Continue to checkout?</p>
+            <p className='mt-2 font-weight-bold'>Total: {props.price} $</p>
             <Button clicked={props.purchaseContinue}
                     type={'Success'}>Buy</Button>
             <Button clicked={props.purchaseCancel}
