@@ -61,6 +61,7 @@ class BurgerBuilder extends Component {
                     <div className="row">
                         <div className="my-3 mx-auto col-lg-6">
                             <BuildControls disabled={disabledInfo}
+                                           price={this.state.totalPrice}
                                            ingredientRemoved={this.removeIngredient}
                                            ingredientAdded={this.addIngredient} />
                         </div>

@@ -5,6 +5,7 @@ import { BurgerIngredients } from "../../../const";
 const buildControls = (props) => {
     return (
         <div>
+            <p className="p-3 mb-2 bg-dark text-white text-center">Price - {props.price}$</p>
             {
                 Object.entries(BurgerIngredients)
                     .filter((ing) => { return ing[1].allowToAddRemove })
