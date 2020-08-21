@@ -3,6 +3,8 @@ import ReactAux from "../../hoc/ReactAux";
 import Burger from "../../Components/Burger/Burger";
 import BuildControls from "../../Components/Burger/BuildControls/BuildControls";
 import { BurgerIngredients } from "../../const";
+import Modal from "../../Components/Layout/UI/Backdrop/Modal/Modal";
+import OrderSummary from "../../Components/Burger/OrderSummary/OrderSummary";
 
 class BurgerBuilder extends Component {
 
@@ -71,6 +73,9 @@ class BurgerBuilder extends Component {
 
         return(
             <ReactAux>
+                <Modal>
+                    <OrderSummary ingredients={this.state.ingredients} />
+                </Modal>
                 <Burger ingredients={this.state.ingredients} />
                 <div className={'container'}>
                     <div className="row">
