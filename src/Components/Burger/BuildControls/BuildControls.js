@@ -1,15 +1,19 @@
 import React from "react";
-import classes from "./BuildControls.module.css";
 import BuildControl from "./BuildControl/BuildControl";
 import { BurgerIngredients } from "../../../const";
 
 const buildControls = (props) => {
     return (
-        <div className={classes.BuildControls}>
+        <div>
             {
                 Object.entries(BurgerIngredients)
+                    .filter((ing) => { return ing[1].allowToAddRemove })
                     .map((ing) => {
-                       return <BuildControl ingredientAdded={() => props.ingredientAdded(ing[1].type)} key={ing[1].type} label={ing[1].label}/>
+                       return <BuildControl ingredientRemoved={() => props.ingredientRemoved(ing[1].type)}
+                                            ingredientAdded={() => props.ingredientAdded(ing[1].type)}
+                                            key={ing[1].type}
+                                            label={ing[1].label}
+                                            disabled={props.disabled[ing[1].type]}/>
                     })
             }
         </div>
