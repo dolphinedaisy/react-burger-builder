@@ -73,6 +73,10 @@ class BurgerBuilder extends Component {
         this.setState({purchasing: false});
     }
 
+    purchaseContinueHandler = () => {
+        alert('Check you bag. You got it');
+    }
+
     render() {
         // format will be {cheese: true, meat: false ...}
         const disabledInfo = { ...this.state.ingredients };
@@ -85,7 +89,9 @@ class BurgerBuilder extends Component {
                 {/*if user is purchasing, click on checkout button then only show modal*/}
                 <Modal modalClosed={this.purchaseCancelHandler}
                        show={this.state.purchasing}>
-                    <OrderSummary ingredients={this.state.ingredients} />
+                    <OrderSummary purchaseContinue={this.purchaseContinueHandler}
+                                  purchaseCancel={this.purchaseCancelHandler}
+                                  ingredients={this.state.ingredients} />
                 </Modal>
                 <Burger ingredients={this.state.ingredients} />
                 <div className={'container'}>
