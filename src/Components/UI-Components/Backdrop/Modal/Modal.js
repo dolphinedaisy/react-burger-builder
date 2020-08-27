@@ -6,13 +6,8 @@ import ReactAux from "../../../../hoc/ReactAux/ReactAux";
 class Modal extends Component {
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log("-------------- inside shouldComponentUpdate Modal.js ---------------");
         // agal nu show and amna nu show jo alag hoy to j agal render ni permission apvani
-        return nextProps.show !== this.props.show;
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('-------------- inside componentDidUpdate Modal.js ---------------')
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     render() {
